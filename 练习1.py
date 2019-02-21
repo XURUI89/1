@@ -21,7 +21,7 @@ class PythonStudent():
     #2.系统默认一个self参数
 
     def DoHomeWork(self):
-        print("在做作业")
+        print("I 在做作业")
 
         #推荐在函数末尾使用return
         return None
