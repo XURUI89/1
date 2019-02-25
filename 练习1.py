@@ -32,3 +32,5 @@ print(yueyue.age)
 
 #注意成员函数的调用没有传递进入参数
 yueyue.DoHomeWork()
+print(PythonStudent.__dict__)#这类人有什么特征
+#{'__module__': '__main__', 'name': None, 'age': 18, 'course': 'Python', 'DoHomeWork': <function PythonStudent.DoHomeWork at 0x000002C559618840>, '__dict__': <attribute '__dict__' of 'PythonStudent' objects>, '__weakref__': <attribute '__weakref__' of 'PythonStudent' objects>, '__doc__': None}
