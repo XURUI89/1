@@ -15,12 +15,15 @@ class Person():
     年龄都是整数
 
     '''
+    def __init__(self):
+
+        self.age1= eval(input("please input your age: "))
 
     def PersonGet(self):
         return self._age  # 再搞个名字
 
-    def PersonSet(self, age):
-        self._age = int(age)
+    def PersonSet(self):
+        self._age = int(age1)
 
     def PersonDel(self):
         self._age = 0
@@ -28,7 +31,7 @@ class Person():
     age = property(PersonGet, PersonSet, PersonDel, "输入年龄")
 
 
-age = eval(input("please input your age: "))
+
 s1 = Person()
-s1.age = age
+
 print(s1.age)
