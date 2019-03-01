@@ -1,37 +1,26 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
 '''
-就是对对象进行规定，
-用户输入后，计算机进行调整，输出，删除的操作
-不要在里面加其他的东西，比如：input
+1.我定义了一个类，可以自动弹出窗口，输入年龄
+2.我用age先取数
+3.我用函数property完成三步走
+4.第一步是修改，第二步输出，第三步删除
 
 '''
-
-
-class Person():
-    '''
-    定义一个人
-    他有属性
-    年龄都是整数
-
-    '''
+class person():
     def __init__(self):
 
-        self.age1= eval(input("please input your age: "))
+        self.age=eval(input("your age:"))
+    def personGet(self):  # 返回些啥？
+        return self._age
 
-    def PersonGet(self):
-        return self._age  # 再搞个名字
+    def personSet(self, age):  # 返回的方式是啥？
+        self._age = int(age)
 
-    def PersonSet(self):
-        self._age = int(age1)
+    def personDelete(self):  # 删除些啥？
+        self._age= "noname"
 
-    def PersonDel(self):
-        self._age = 0
-
-    age = property(PersonGet, PersonSet, PersonDel, "输入年龄")
-
-
-
-s1 = Person()
-
-print(s1.age)
+    age = property(personGet, personSet, personDelete, "说明性文字")
+p1=person()
+p1.age
+print(p1.age)
