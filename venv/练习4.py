@@ -13,3 +13,5 @@ stu1 = student("one")
 stu2 = student("two")
 
 print(stu1 > stu2)
+
+help(MethodType)
